@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --lime: rgb(242 237 225);
+  --red: rgb(234 102 74);
+  --gray: rgb(179, 177, 177);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+nav {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  padding-block: 1rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+ul li {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+ul li.active {
+  background-color: var(--lime);
+}
+
+main {
+  max-width: 90%;
+  margin-inline: auto;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 3rem;
+  position: relative;
+}
+
+.view_more {
+  border: none;
+  background-color: var(--red);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.slider_wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  width: 1840px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.left {
+  left: -1.5rem;
+}
+
+.right {
+  right: -1.5rem;
+}
+
+.card {
+  position: relative;
+  min-width: 200px;
+  border: 1px solid var(--gray);
+  transition: all 2s;
+  left: 0;
+}
+
+.card h3 {
+  padding: 0.5rem 1rem 0.1rem;
+  font-size: 1rem;
+}
+
+.card p {
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+}
